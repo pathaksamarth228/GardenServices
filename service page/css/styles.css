@@ -1,0 +1,305 @@
+
+
+body {
+  font-family: 'Ubuntu';
+  text-align: center;
+}
+/* all heading after refactoring */
+h1,h2,h3{
+  font-family: sans-serif;
+  font-weight: 900;
+  line-height:0.1;
+}
+
+/* ################## ##################  */
+.big-heading{
+  font-family: 'Sedgwick Ave', cursive;
+  font-weight: 400;
+  font-size: 3.5rem;
+  text-align: left;
+}
+.heading-desc{
+  padding-top: 2%;
+  font-family: 'Ubuntu',sans-serif;
+  font-size: 1.2rem;
+  font-weight: 150;
+}
+
+
+#title {
+  text-align: left;
+}
+
+.container-fluid {
+  padding: 1.5% 7%;
+}
+
+/* Sections */
+
+.colored-section{
+  background-color: #5CC1BB;
+  color: white;
+}
+.white-section{
+  background-color: #fff;
+}
+
+/* navigation bar */
+.navbar{
+  padding: 0 0 4.5rem;
+}
+.navbar-brand{
+  font-family: "Ubuntu";
+  font-size: 2rem;
+  font-weight: bold;
+}
+.nav-item{
+  padding: 0px 18px;
+  text-align: right;
+}
+.nav-link{
+  font-family: "Ubuntu";
+  font-size: 1.2rem;
+  font-weight: 100;
+}
+
+/* Download buttons */
+.download-buttons{
+  margin: 5% 3% 5% 0%;
+  font-size: 1rem;
+}
+
+/* title-image */
+.title-image{
+  width: 60%;
+  transform: rotate(25deg);
+  position: absolute;
+  right: 30%;
+}
+/* z index is used give z dimension to the image and it requires pos element to do that  */
+/* if we don't use z index and pos element then the images or divs folloow the natural stacking order */
+
+/* Features section*/
+#features{
+  position: relative;
+  z-index: 1;
+}
+.feature-box{
+  padding: 1%;
+  padding-left: 0px;
+}
+.feature-box2{
+  padding: 1%;
+  padding-left: 70px;
+}
+.feature-box3{
+  padding: 1%;
+  padding-left: 0px;
+}
+.feature-title{
+  font-size: 1.5rem;
+  text-align: center;
+  padding-left: 0px;
+}
+#features-p{
+  color: #8f8f8f;
+  font-family: sans-serif;
+  font-weight: lighter;
+}
+.myColor{
+  color: #ef8172;
+}
+.myColor:hover{
+  color: #ff4c68;
+}
+
+/* Testimonials section */
+
+
+/* .carousel-item{
+  padding: 7% 15%;
+} */
+.testimonial-image{
+  width: 10%;
+  border-radius: 50%;
+  margin: 20px;
+}
+.testimonial-text{
+  font-size: 3rem;
+  line-height: 1.5;
+}
+
+#press{
+  padding-bottom: 3%;
+}
+.press-logo{
+  width: 15%;
+  margin: 20px 20px 50px;
+}
+
+/* Pricing section  */
+#pricing{
+  padding: 100px;
+}
+.pricing-col{
+  padding: 3% 2%;
+}
+.pricing-text{
+  font-size: 3rem;
+  line-height: 1.5;
+}
+.chi-labra{
+  margin-bottom: 32px;
+}
+.the-shadow{
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.25);
+}
+.plan-pack{
+  padding-top: 10px;
+}
+/* Using media query for making our website responsive */
+
+@media (max-width: 1028px){
+  #title{
+    text-align: center;
+  }
+  .title-image{
+    position: static;
+    transform: rotate(0);
+  }
+
+}
+
+/* cta section */
+
+#last-section{
+  font-size: 2.5rem;
+  font-family: 'Ubuntu';
+  margin-left: 20%;
+  margin-right: 20%;
+  line-height: 1.5;
+}
+/* footer section */
+
+.a{
+  color: black;
+}
+
+
+/* list-selector */
+* {
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  background: #f7f6ff;
+}
+
+h2 {
+  margin: 16px;
+}
+
+.container {
+  margin-top: 50px;
+  padding: 32px;
+}
+
+.select-box {
+  display: flex;
+  width: 400px;
+  flex-direction: column;
+}
+
+.select-box .options-container {
+  background: #2f3640;
+  color: #f5f6fa;
+  max-height: 0;
+  width: 100%;
+  opacity: 0;
+  transition: all 0.4s;
+  border-radius: 8px;
+  overflow: hidden;
+
+  order: 1;
+}
+
+.selected {
+  background: #2f3640;
+  border-radius: 8px;
+  margin-bottom: 8px;
+  color: #f5f6fa;
+  position: relative;
+
+  order: 0;
+}
+
+.selected::after {
+  content: "";
+  background: url("img/arrow-down.svg");
+  background-size: contain;
+  background-repeat: no-repeat;
+
+  position: absolute;
+  height: 100%;
+  width: 32px;
+  right: 10px;
+  top: 5px;
+
+  transition: all 0.4s;
+}
+
+.select-box .options-container.active {
+  max-height: 240px;
+  opacity: 1;
+  overflow-y: scroll;
+}
+
+.select-box .options-container.active + .selected::after {
+  transform: rotateX(180deg);
+  top: -6px;
+}
+
+.select-box .options-container::-webkit-scrollbar {
+  width: 8px;
+  background: #0d141f;
+  border-radius: 0 8px 8px 0;
+}
+
+.select-box .options-container::-webkit-scrollbar-thumb {
+  background: #525861;
+  border-radius: 0 8px 8px 0;
+}
+
+.select-box .option,
+.selected {
+  padding: 12px 24px;
+  cursor: pointer;
+}
+
+.select-box .option:hover {
+  background: #414b57;
+}
+
+.select-box label {
+  cursor: pointer;
+}
+
+.select-box .option .radio {
+  display: none;
+}
+
+.service-heading{
+  padding-left: 120px;
+  padding-bottom: 30px;
+}
+.logo{
+  width: 70px;
+  height: 70px;
+}
+.photo-kid{
+  width: 400px;
+  height: 400px;
+  padding-right: 10px;
+}
